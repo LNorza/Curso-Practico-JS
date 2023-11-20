@@ -6,7 +6,7 @@ const menuIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 /* Car-shop */
 const menuCar = document.querySelector(".navbar-shopping-cart");
-const asideCar = document.querySelector(".product-detail");
+const asideCar = document.querySelector("aside");
 
 /* Product Area */
 const cardsContainer = document.querySelector(".cards-container");
@@ -49,7 +49,7 @@ function toggleAsideCar() {
     }
 }
 
-/* Product Area */
+/* Product Area / show products in view */
 function renderArray(arr) {
     for (product of productList) {
         const productCard = document.createElement("div");
