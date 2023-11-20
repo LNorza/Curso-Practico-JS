@@ -19,6 +19,11 @@ body {
     display: none;
 }
 
+.hide-right {
+    transform: translateX(400px);
+    transition: transform 400ms;
+}
+
 /* Navbar (General) */
 nav {
     display: flex;
@@ -150,12 +155,13 @@ nav {
 .mobile-menu {
     cursor: pointer;
     position: absolute;
+    background-color: var(--white);
     top: 60px;
     padding: 24px;
     transition: transform 400ms;
 }
 
-.oculto {
+.hide-left {
     transform: translateX(-200px);
     transition: transform 400ms;
 }
@@ -189,10 +195,12 @@ nav {
 /* Product Detail (Aside) */
 .product-detail {
     width: 360px;
+    background-color: var(--white);
     padding: 0 20px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    transition: transform 400ms;
 }
 .title-container {
     display: flex;
