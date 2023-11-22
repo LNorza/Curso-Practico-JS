@@ -2,6 +2,7 @@
 :root {
     --white: #ffffff;
     --black: #000000;
+    --grey: #3a3a3a;
     --very-light-pink: #acaaaa;
     --text-input-field: #f7f7f7;
     --hospital-green: #acd9b2;
@@ -12,6 +13,7 @@
 body {
     margin: 0;
     font-family: "Quicksand", sans-serif;
+    background-color: var(--grey);
 }
 
 .inactive {
@@ -62,7 +64,6 @@ nav {
 .navbar-right ul li a {
     text-decoration: none;
     color: var(--very-light-pink);
-    border: 1px solid var(--white);
     padding: 8px;
     border-radius: 8px;
 }
@@ -87,6 +88,7 @@ nav {
 }
 
 .navbar-shopping-cart {
+    cursor: pointer;
     position: relative;
 }
 
@@ -277,25 +279,33 @@ aside {
 }
 
 /* Product Detail */
+#productDetail {
+    background-color: var(--grey);
+    border: 1px solid var(--very-light-pink);
+    width: 30%;
+    padding: 20px;
+}
 .product-detail-close {
     background: var(--white);
     width: 14px;
     height: 14px;
     position: absolute;
-    top: 24px;
-    left: 24px;
+    top: 12px;
+    left: 12px;
     z-index: 2;
     padding: 12px;
     border-radius: 50%;
+    border: 1px solid var(--very-light-pink);
+    cursor: pointer;
 }
 .product-detail-close:hover {
-    cursor: pointer;
+    background-color: var(--grey);
 }
 #productDetail > img:nth-child(2) {
     width: 100%;
     height: 360px;
     object-fit: cover;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
 }
 #productDetail .product-info {
     margin: 24px 24px 0 24px;
@@ -342,6 +352,7 @@ aside {
     gap: 26px;
     place-content: center;
     margin-top: 30px;
+    cursor: pointer;
 }
 .product-card {
     width: 240px;
@@ -396,6 +407,10 @@ aside {
     }
     #shoppingCartContainer {
         width: 100%;
+    }
+    #productDetail {
+        width: 100%;
+        padding: 15px;
     }
     .desktop-menu {
         display: none;
